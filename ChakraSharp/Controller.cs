@@ -137,7 +137,7 @@ namespace ChakraSharp
         {
             JavaScriptValue result;
 
-            var err = Native.JsRunScript(js, currentSourceContext++, sourceName, out result);
+            var err = Native.JsRun(JavaScriptValue.FromString(js), currentSourceContext++, JavaScriptValue.FromString(sourceName),JavaScriptParseScriptAttributes.JsParseScriptAttributeNone, out result);
             if (err == JavaScriptErrorCode.ScriptException ||
                 err == JavaScriptErrorCode.ScriptCompile ||
                 err == JavaScriptErrorCode.InExceptionState)
@@ -157,7 +157,7 @@ namespace ChakraSharp
         public JSValue Evaluate(string js, string sourceName)
         {
             JavaScriptValue result;
-            var err = Native.JsRunScript(js, currentSourceContext++, sourceName, out result);
+            var err = Native.JsRun(JavaScriptValue.FromString(js), currentSourceContext++, JavaScriptValue.FromString(sourceName),JavaScriptParseScriptAttributes.JsParseScriptAttributeNone, out result);
             if (err == JavaScriptErrorCode.ScriptException ||
                 err == JavaScriptErrorCode.ScriptCompile ||
                 err == JavaScriptErrorCode.InExceptionState)

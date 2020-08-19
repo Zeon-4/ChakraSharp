@@ -69,6 +69,7 @@
     <Compile Include="Hosting\JavaScriptUsageException.cs" />
     <Compile Include="Hosting\JavaScriptValue.cs" />
     <Compile Include="Hosting\JavaScriptValueType.cs" />
+    <Compile Include="Hosting\JavaScriptParseScriptAttributes.cs" />
     <Compile Include="Hosting\Native.cs" />
     <Compile Include="JSValue.cs" />
     <Compile Include="Port\FunctionWrapper.cs" />

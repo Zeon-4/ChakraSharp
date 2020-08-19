@@ -218,7 +218,7 @@
         public static JavaScriptValue RunScript(string script, JavaScriptSourceContext sourceContext, string sourceName)
         {
             JavaScriptValue result;
-            Native.ThrowIfError(Native.JsRunScript(script, sourceContext, sourceName, out result));
+            Native.ThrowIfError(Native.JsRun(JavaScriptValue.FromString(script), sourceContext, JavaScriptValue.FromString(sourceName),JavaScriptParseScriptAttributes.JsParseScriptAttributeNone, out result));
             return result;
         }
 
